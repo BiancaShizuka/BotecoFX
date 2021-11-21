@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.15.0.final using JasperReports Library version 6.15.0-dd49bfb94918336b8321d5507193f0169ead4e95  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="subpag" pageWidth="595" pageHeight="842" whenNoDataType="NoPages" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="ac656e95-8bdc-4be9-b4fc-0f533b7c26c2">
+	<parameter name="com_id" class="java.lang.Integer">
+		<defaultValueExpression><![CDATA[$P{com_id}]]></defaultValueExpression>
+	</parameter>
+	<queryString language="SQL">
+		<![CDATA[select * from comanda as c, pagamento as p,tipopgto as t
+where c.com_id=p.com_id and p.tpg_id=t.tpg_id
+and c.com_id=$P{com_id}]]>
+	</queryString>
+	<field name="com_id" class="java.lang.Integer">
+		<property name="com.jaspersoft.studio.field.name" value="com_id"/>
+		<property name="com.jaspersoft.studio.field.label" value="com_id"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="comanda"/>
+	</field>
+	<field name="pag_id" class="java.lang.Integer">
+		<property name="com.jaspersoft.studio.field.name" value="pag_id"/>
+		<property name="com.jaspersoft.studio.field.label" value="pag_id"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="pagamento"/>
+	</field>
+	<field name="pag_valor" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.name" value="pag_valor"/>
+		<property name="com.jaspersoft.studio.field.label" value="pag_valor"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="pagamento"/>
+	</field>
+	<field name="tpg_id" class="java.lang.Integer">
+		<property name="com.jaspersoft.studio.field.name" value="tpg_id"/>
+		<property name="com.jaspersoft.studio.field.label" value="tpg_id"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="pagamento"/>
+	</field>
+	<field name="tpg_nome" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="tpg_nome"/>
+		<property name="com.jaspersoft.studio.field.label" value="tpg_nome"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="tipopgto"/>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<pageHeader>
+		<band height="35" splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="22" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="0" width="141" height="20" uuid="2dbe733d-df17-42d9-8e11-7032f754cc0a">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="2e4949b6-abb8-467c-b6eb-477a526e3d47"/>
+				</reportElement>
+				<textElement textAlignment="Center">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[pag_id]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="141" y="0" width="138" height="20" uuid="01e25a07-9ae5-42ae-90d5-6b6d8f227559">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="c19837ec-0b25-4112-b5ce-1b9c1772e9eb"/>
+				</reportElement>
+				<textElement textAlignment="Center">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[pag_valor]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="279" y="0" width="138" height="20" uuid="081cf2d4-e7ac-47f5-a63a-4383b98e0998">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="0c106533-1521-4b93-ae42-8253c633ba16"/>
+				</reportElement>
+				<textElement textAlignment="Center">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[tpg_id]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="417" y="0" width="138" height="20" uuid="e35ee46d-b511-417f-9e91-2e2f409261d3">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="2b75b911-7933-49da-8f8b-01e5de17e249"/>
+				</reportElement>
+				<textElement textAlignment="Center">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[tpg_nome]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="39" splitType="Stretch">
+			<textField>
+				<reportElement x="0" y="0" width="141" height="30" uuid="27fef5ba-2d06-4114-9005-db097e9aafc8">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="2e4949b6-abb8-467c-b6eb-477a526e3d47"/>
+				</reportElement>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{pag_id}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="141" y="0" width="138" height="30" uuid="74fa26b8-b54c-4725-b739-253a1b08d576">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="c19837ec-0b25-4112-b5ce-1b9c1772e9eb"/>
+				</reportElement>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{pag_valor}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="279" y="0" width="138" height="30" uuid="28b0b5a7-507f-4298-9f0e-e4173029e46a">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="0c106533-1521-4b93-ae42-8253c633ba16"/>
+				</reportElement>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{tpg_id}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="417" y="0" width="138" height="30" uuid="ea541afe-db2e-45ed-ae23-af1a2372751d">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="2b75b911-7933-49da-8f8b-01e5de17e249"/>
+				</reportElement>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{tpg_nome}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+</jasperReport>

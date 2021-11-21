@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.15.0.final using JasperReports Library version 6.15.0-dd49bfb94918336b8321d5507193f0169ead4e95  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="rel_comanda" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="c1992187-e8ca-409e-ada5-a423914fd485">
+	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="Boteco"/>
+	<queryString language="SQL">
+		<![CDATA[select * from comanda]]>
+	</queryString>
+	<field name="com_id" class="java.lang.Integer">
+		<property name="com.jaspersoft.studio.field.name" value="com_id"/>
+		<property name="com.jaspersoft.studio.field.label" value="com_id"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="comanda"/>
+	</field>
+	<field name="gar_id" class="java.lang.Integer">
+		<property name="com.jaspersoft.studio.field.name" value="gar_id"/>
+		<property name="com.jaspersoft.studio.field.label" value="gar_id"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="comanda"/>
+	</field>
+	<field name="com_numero" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.name" value="com_numero"/>
+		<property name="com.jaspersoft.studio.field.label" value="com_numero"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="comanda"/>
+	</field>
+	<field name="com_nome" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="com_nome"/>
+		<property name="com.jaspersoft.studio.field.label" value="com_nome"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="comanda"/>
+	</field>
+	<field name="com_data" class="java.sql.Date">
+		<property name="com.jaspersoft.studio.field.name" value="com_data"/>
+		<property name="com.jaspersoft.studio.field.label" value="com_data"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="comanda"/>
+	</field>
+	<field name="com_desc" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="com_desc"/>
+		<property name="com.jaspersoft.studio.field.label" value="com_desc"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="comanda"/>
+	</field>
+	<field name="com_valor" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.name" value="com_valor"/>
+		<property name="com.jaspersoft.studio.field.label" value="com_valor"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="comanda"/>
+	</field>
+	<field name="com_status" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="com_status"/>
+		<property name="com.jaspersoft.studio.field.label" value="com_status"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="comanda"/>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch"/>
+	</title>
+	<pageHeader>
+		<band height="35" splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="61" splitType="Stretch"/>
+	</columnHeader>
+	<detail>
+		<band height="125" splitType="Stretch"/>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>

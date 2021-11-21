@@ -1,0 +1,38 @@
+.titled-pane {
+    -fx-font-size: 17px;
+    -fx-background-color: #0000ff;
+    -fx-text-fill: #ffffff;
+    -fx-alignment: center;
+    -fx-font-weight: bold;
+    
+}
+
+.titled-pane .hyperlink{
+    -fx-font-size: 15px;
+    -fx-text-fill: #330080;
+}
+.titled-pane #vbox_cadatros{
+    -fx-background-color: #e6f2ff;
+    -fx-spacing: 10px;
+    -fx-padding: 0;
+}
+.titled-pane #vbox_configuracoes{
+    -fx-background-color: #e6f2ff;
+    -fx-spacing: 10px;
+    -fx-padding: 0;
+}
+.titled-pane .hyperlink:hover{
+    -fx-text-fill: #ff0066;
+    -fx-cursor: hand;
+    -fx-underline: false;
+    -fx-background-color: #ccddff
+    
+}
+.titled-pane .hyperlink:visited{
+   -fx-underline: false;
+    
+}
+.titled-pane .hyperlink:focused{
+    -fx-text-fill: #ff0066;
+
+}

@@ -1,0 +1,192 @@
+.table-view {
+    -fx-table-color: rgba(0, 255, 0, 0.6);
+    -fx-table-rippler-color: rgba(255, 255, 0, 0.4);
+}
+
+.table-view:focused .table-row-cell:selected {
+    -fx-background-color: -fx-table-color;
+    -fx-table-cell-border-color: -fx-table-color;
+    -fx-text-fill: BLACK;
+}
+
+.table-view:focused .table-row-cell:selected .table-cell {
+    -fx-text-fill: BLACK;
+}
+
+.table-view .jfx-rippler {
+    -jfx-rippler-fill: -fx-table-rippler-color;
+}
+
+.table-view .column-header,
+.table-view .column-header-background,
+.table-view .column-header-background .filler {
+    -fx-background-color: TRANSPARENT;
+}
+
+.table-view .column-header .label {
+    -fx-padding: 16 0 16 0;
+}
+
+.table-view .column-header .arrow, .table-view .column-header .sort-order-dot {
+    -fx-background-color: #949494;
+}
+
+.table-view .column-header:last-visible {
+    -fx-border-width: 0 2 0 1;
+}
+
+.table-view .column-header-background {
+    -fx-border-width: 0 0.0 1 0;
+    -fx-border-color: #F3F3F3;
+}
+
+.table-view .column-overlay {
+    -fx-background-color: -fx-table-color;
+}
+
+.table-view .column-resize-line, .table-view .column-drag-header {
+    -fx-background-color: -fx-table-rippler-color;
+}
+
+.table-view:focused {
+    -fx-background-color: -fx-table-color, -fx-box-border, -fx-control-inner-background;
+    -fx-background-insets: -1.4, 0, 1;
+    -fx-background-radius: 1.4, 0, 0;
+    /*....*/
+    -fx-padding: 1; /* 0.083333em; */
+}
+
+.table-row-cell > .disclosure-node > .arrow {
+    -fx-background-color: -fx-text-fill;
+    -fx-padding: 0.333333em 0.229em 0.333333em 0.229em; /* 4 */
+    -fx-shape: "M 0 -3.5 L 4 0 L 0 3.5 z";
+}
+
+.table-row-cell .jfx-text-field {
+    -fx-focus-color: rgba(240, 40, 40,0.5);
+}
+
+.table-row-group {
+    -fx-background-color: rgba(230, 230, 230, 1);
+}
+
+.accordion .titled-pane .title {
+    -fx-background-color: transparent ;
+
+}
+
+.accordion .titled-pane .arrow {
+    -fx-background-color: #00796B;
+
+}
+
+.accordion .titled-pane > *.content{
+    -fx-background-color: transparent   ;
+    -fx-border-color: gray;
+}
+
+.table-view .column-header {
+    -fx-border-width: 0 1 0 1;
+    -fx-border-color: #F3F3F3;
+}
+
+.table-view .column-header-background{
+    -fx-background-color: #03a8f8;
+    -fx-text-fill: white;
+}
+
+.table-view .column-header-background .filler {
+    -fx-background-color: transparent;
+    
+}
+.table-view .column-header .label {
+    -fx-font-size: 15px;
+    -fx-text-fill: white;
+    -fx-alignment: center;
+}
+
+.table-view .table-cell {
+    -fx-border-width: 0 0 0 0;
+    -fx-alignment: center;
+}
+.button:hover{
+    -fx-background-color:#66c2ff;
+}
+.table-row-cell:hover{
+    -fx-background-color:#4dffb8;
+}
+
+.button{
+    -fx-background-color: #999999;
+    -fx-text-fill: white;
+}
+#btnCad{
+    -fx-background-color: greenyellow;
+    -fx-text-fill: white;
+    -fx-background-image: url('/img/create.png');
+    -fx-background-position: center center;
+    -fx-background-repeat: no-repeat;
+}
+#btnCad:hover{
+    -fx-background-color: #c6ffb3;
+    -fx-text-fill: black;
+}
+#btnPesq{
+    -fx-background-color: #00ccff;
+    -fx-text-fill: white;
+    -fx-background-image: url('/img/search.png');
+    -fx-background-position: center center;
+    -fx-background-repeat: no-repeat;
+}
+#btnPesq:hover{
+    -fx-background-color: #ccffff;
+    -fx-text-fill: black;
+}
+#btnDel{
+    -fx-background-color: #ff1a1a;
+    -fx-text-fill: white;
+    -fx-background-image: url('/img/delete.png');
+    -fx-background-position: center center;
+    -fx-background-repeat: no-repeat;
+}
+#btnDel:hover{
+    -fx-background-color: #ff8080;
+    -fx-text-fill: black;
+}
+#btnAdd{
+    -fx-background-image: url('/img/addCom.png');
+    -fx-background-position: center center;
+    -fx-background-repeat: no-repeat;
+    -fx-background-color:#00cccc;
+}
+#btnAdd:hover{
+    -fx-background-color: #e6f9ff;
+}
+
+.menu-button{
+    -fx-background-color: #00cccc;
+    -fx-text-fill: white;
+}
+.menu-item .label {
+    -fx-text-fill: white;
+    -fx-font-size:15px;
+}
+
+.menu-item:focused {
+     -fx-background-color: darkgray;
+}
+
+.menu-item:focused .label {
+    -fx-text-fill: blue;
+}
+
+.context-menu {
+    -fx-background-color: #00cccc;
+    -fx-background-insets: 0, 1, 2;
+    -fx-background-radius: 0 6 6 6, 0 5 5 5, 0 4 4 4;
+    -fx-padding: 0.333333em 0.083333em 0.666667em 0.083333em; 
+}
+
+.hyperlink:hover {
+    -fx-underline: true;
+}

@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.15.0.final using JasperReports Library version 6.15.0-dd49bfb94918336b8321d5507193f0169ead4e95  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="garcon_cidade" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="56385f26-bba1-44ee-b5e1-3d09a432078c">
+	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="Boteco"/>
+	<queryString language="SQL">
+		<![CDATA[select * from garcon as g
+order by g.gar_cidade]]>
+	</queryString>
+	<field name="gar_id" class="java.lang.Integer">
+		<property name="com.jaspersoft.studio.field.name" value="gar_id"/>
+		<property name="com.jaspersoft.studio.field.label" value="gar_id"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="garcon"/>
+	</field>
+	<field name="gar_nome" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="gar_nome"/>
+		<property name="com.jaspersoft.studio.field.label" value="gar_nome"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="garcon"/>
+	</field>
+	<field name="gar_cpf" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="gar_cpf"/>
+		<property name="com.jaspersoft.studio.field.label" value="gar_cpf"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="garcon"/>
+	</field>
+	<field name="gar_fone" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="gar_fone"/>
+		<property name="com.jaspersoft.studio.field.label" value="gar_fone"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="garcon"/>
+	</field>
+	<field name="gar_cep" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="gar_cep"/>
+		<property name="com.jaspersoft.studio.field.label" value="gar_cep"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="garcon"/>
+	</field>
+	<field name="gar_endereco" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="gar_endereco"/>
+		<property name="com.jaspersoft.studio.field.label" value="gar_endereco"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="garcon"/>
+	</field>
+	<field name="gar_cidade" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="gar_cidade"/>
+		<property name="com.jaspersoft.studio.field.label" value="gar_cidade"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="garcon"/>
+	</field>
+	<field name="gar_uf" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="gar_uf"/>
+		<property name="com.jaspersoft.studio.field.label" value="gar_uf"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="garcon"/>
+	</field>
+	<group name="gar_cidade">
+		<groupExpression><![CDATA[$F{gar_cidade}]]></groupExpression>
+	</group>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch"/>
+	</title>
+	<pageHeader>
+		<band height="35" splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="61" splitType="Stretch"/>
+	</columnHeader>
+	<detail>
+		<band height="125" splitType="Stretch"/>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>

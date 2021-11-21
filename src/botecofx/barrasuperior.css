@@ -1,0 +1,20 @@
+#hboxsuperior{
+    -fx-background-color:  #00b3b3;
+    -fx-spacing: 10px;
+}
+#hboxsuperior .hyperlink{
+    -fx-font-size: 15px;
+    -fx-font-weight: bold;
+        
+}
+#hboxsuperior .hyperlink:hover{
+    -fx-text-fill: #ffffff;
+    -fx-underline: false;
+    -fx-background-color: #008080
+    
+}
+#hboxsuperior .hyperlink:visited{
+   -fx-underline: false;
+    
+}
+

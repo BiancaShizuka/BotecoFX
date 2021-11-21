@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.15.0.final using JasperReports Library version 6.15.0-dd49bfb94918336b8321d5507193f0169ead4e95  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="rel_produtos" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="047cb58e-f919-4dc5-8dc1-5b1237f74957">
+	<property name="com.jaspersoft.studio.data.sql.tables">
+		<![CDATA[dW5pZGFkZSBBUyAsMTUsNjgsNGU1MTg4MGEtNzdhYS00MmZlLTkyNDItZGRkNGY0MzU3ZjM5O3By
+b2R1dG8gQVMgLDEzNCwxNSw5ZGQ3ZGZkYi0zMWUzLTQ1YWEtOTg1Mi00MTUzNDExMzIxMWQ7Y2F0
+ZWdvcmlhIEFTICwyNjEsNjgsNDM2ZmQwNjYtMjNjYy00MjJkLWIxNzMtNzBmNWI3YjI4ZWU3Ow==]]>
+	</property>
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="Boteco"/>
+	<queryString language="SQL">
+		<![CDATA[SELECT *
+FROM produto AS p,
+	categoria AS c,
+	unidade AS u
+WHERE 
+	 p.cat_id = c.cat_id 
+	 AND p.uni_id = u.uni_id 
+ORDER BY p.prod_nome DESC]]>
+	</queryString>
+	<field name="prod_id" class="java.lang.Integer">
+		<property name="com.jaspersoft.studio.field.name" value="prod_id"/>
+		<property name="com.jaspersoft.studio.field.label" value="prod_id"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="produto"/>
+	</field>
+	<field name="prod_nome" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="prod_nome"/>
+		<property name="com.jaspersoft.studio.field.label" value="prod_nome"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="produto"/>
+	</field>
+	<field name="cat_nome" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="cat_nome"/>
+		<property name="com.jaspersoft.studio.field.label" value="cat_nome"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="categoria"/>
+	</field>
+	<field name="uni_nome" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="uni_nome"/>
+		<property name="com.jaspersoft.studio.field.label" value="uni_nome"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="unidade"/>
+	</field>
+	<field name="prod_preco" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.name" value="prod_preco"/>
+		<property name="com.jaspersoft.studio.field.label" value="prod_preco"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="produto"/>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch"/>
+	</title>
+	<pageHeader>
+		<band height="35" splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="61" splitType="Stretch"/>
+	</columnHeader>
+	<detail>
+		<band height="125" splitType="Stretch"/>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>

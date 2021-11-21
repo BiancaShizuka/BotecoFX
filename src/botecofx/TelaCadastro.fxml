@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.scene.control.Accordion?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.VBox?>
+
+<BorderPane fx:id="painel" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="botecofx.TelaCadastroController">
+   <left>
+      <Accordion prefHeight="400.0" prefWidth="135.0" style="-fx-background-color: #00ccff;" BorderPane.alignment="CENTER">
+        <panes>
+          <TitledPane fx:id="titlepane_cadastro" animated="false" prefHeight="362.0" prefWidth="229.0" text="Cadastro">
+               <content>
+                  <VBox fx:id="vbox_cadatros" alignment="TOP_CENTER" prefHeight="200.0" prefWidth="100.0" spacing="10.0">
+                     <children>
+                        <Hyperlink alignment="CENTER" onAction="#evtCadProduto" prefHeight="29.0" prefWidth="171.0" text="Produto" />
+                        <Hyperlink alignment="CENTER" onAction="#evtCadGarcon" prefHeight="29.0" prefWidth="184.0" text="Garçon" />
+                        <Hyperlink alignment="CENTER" onAction="#evtCadCategoria" prefHeight="29.0" prefWidth="171.0" text="Categoria" />
+                        <Hyperlink alignment="CENTER" onAction="#evtCadUnidade" prefHeight="29.0" prefWidth="173.0" text="Unidade" />
+                        <Hyperlink alignment="CENTER" onAction="#evTipoPagamento" prefHeight="29.0" prefWidth="217.0" text="Tipo de Pagamento" />
+                     </children>
+                  </VBox>
+               </content>
+          </TitledPane>
+            <TitledPane animated="false" layoutX="10.0" layoutY="10.0" prefHeight="362.0" prefWidth="199.0" stylesheets="@administrativo.css" text="Configuraçãoes">
+               <content>
+                  <VBox fx:id="vbox_configuracoes" alignment="TOP_CENTER" prefHeight="200.0" prefWidth="100.0" spacing="10.0">
+                     <children>
+                        <Hyperlink alignment="CENTER" onAction="#evtBackup" prefHeight="29.0" prefWidth="193.0" text="Backup" />
+                        <Hyperlink alignment="CENTER" onAction="#evtRestauracao" prefHeight="29.0" prefWidth="251.0" text="Restauração" />
+                     </children>
+                  </VBox>
+               </content>
+            </TitledPane>
+        </panes>
+      </Accordion>
+   </left>
+   <stylesheets>
+      <URL value="@estilo.css" />
+      <URL value="@administrativo.css" />
+   </stylesheets>
+</BorderPane>

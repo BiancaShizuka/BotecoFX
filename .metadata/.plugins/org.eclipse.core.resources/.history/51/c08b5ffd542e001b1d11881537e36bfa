@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.15.0.final using JasperReports Library version 6.15.0-dd49bfb94918336b8321d5507193f0169ead4e95  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="com_itens" pageWidth="595" pageHeight="842" columnWidth="500" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="e3025165-50d9-4c5b-9a0a-ef84edeafafa">
+	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="Boteco"/>
+	<parameter name="codComanda" class="java.lang.Integer"/>
+	<queryString language="SQL">
+		<![CDATA[select * from pagamento as p, tipopgto as t where p.tpg_id=t.tpg_id]]>
+	</queryString>
+	<field name="pag_id" class="java.lang.Integer">
+		<property name="com.jaspersoft.studio.field.name" value="pag_id"/>
+		<property name="com.jaspersoft.studio.field.label" value="pag_id"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="pagamento"/>
+	</field>
+	<field name="pag_valor" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.name" value="pag_valor"/>
+		<property name="com.jaspersoft.studio.field.label" value="pag_valor"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="pagamento"/>
+	</field>
+	<field name="tpg_nome" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="tpg_nome"/>
+		<property name="com.jaspersoft.studio.field.label" value="tpg_nome"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="tipopgto"/>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<columnHeader>
+		<band height="40">
+			<staticText>
+				<reportElement x="150" y="0" width="130" height="30" uuid="eba2be99-6dcb-4f59-b5bd-d8b9d6360a7f"/>
+				<textElement textAlignment="Center">
+					<font size="16" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Valor]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="0" width="150" height="30" uuid="4c815ded-8ad0-4caa-9726-9628618fa8b6"/>
+				<textElement textAlignment="Center">
+					<font size="16" isBold="true"/>
+				</textElement>
+				<text><![CDATA[ID]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="280" y="0" width="270" height="30" uuid="179c6b8e-f01f-4421-8190-72e2e2aeff90">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="4601de13-ca8a-4e0f-86f5-748491a09a69"/>
+				</reportElement>
+				<textElement textAlignment="Center">
+					<font size="16" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Tipo de pagamento]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="55" splitType="Stretch">
+			<textField>
+				<reportElement x="0" y="12" width="150" height="30" uuid="35f06697-f644-49f8-abb6-fe90e58e403c"/>
+				<textElement textAlignment="Center">
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{pag_id}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="150" y="12" width="130" height="30" uuid="2d101b9c-f528-465f-9705-49f6484c7594"/>
+				<textElement textAlignment="Center">
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{pag_valor}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="280" y="10" width="270" height="30" uuid="7ecbca63-b4ce-42e1-a7b1-c68fe9ec8855">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="4601de13-ca8a-4e0f-86f5-748491a09a69"/>
+				</reportElement>
+				<textElement textAlignment="Center">
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{tpg_nome}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+</jasperReport>
